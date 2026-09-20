@@ -61,7 +61,7 @@ more familiar.
 | service (generic/common noun) | сервіс | loc_uk dictionary, same entry as above; also matches "виявлення сервісу" in the same dictionary. Used for "what services your application provides" (p17). |
 | service discovery | виявлення сервісу | loc_uk dictionary, exact entry (singular "сервісу", not plural — differs from the older `what-is-kubernetes.md` page which uses plural "Виявлення сервісів"; the dictionary was followed as the more deliberately curated term list). |
 | ReplicaSet | ReplicaSet (undeclined save via apostrophe pattern; plural ReplicaSets) | Not in loc_uk's dictionary table by name, but covered by the general object-name rule and listed alongside Deployment/DaemonSet/StatefulSet as untranslated in `content/uk/docs/concepts/_index.md`. The English source book already capitalizes "ReplicaSets" as a proper term (p14–15), so no change of register was needed. |
-| replica | репліка | loc_uk dictionary, exact entry; declines as a normal feminine noun (репліка, репліки, реплік). |
+| replica | репліка (note pages), копія (story pages) | loc_uk dictionary has "replica \| репліка", kept in the notes and glossed there as «копія Pod'а», since «репліка» also means a line of dialogue in general Ukrainian. Story pages, where these are Phippy's friends, use «копія». |
 | Namespace (API kind) | простір імен (translated, lowercase) | **Deviates from loc_uk's literal object-name rule**, which lists Namespace among the untranslated kinds. The actual live page `kubernetes.io/uk/docs/reference/glossary/namespace.md` was followed instead: its title is "Namespace" but `aka: Простір імен`, and the entire body prose uses "Простори імен" throughout, never bare "Namespace". Why that page departs from the written rule is not stated there, so no reason is assumed here. It also reads far better aloud in a children's book than leaving "Namespace" bare mid-sentence. **Flagged for reviewer**: this is a judgment call between two K8s-team sources that disagree with each other. |
 | Volume (API kind) | Volume (undeclined, vowel-ending) | loc_uk core rule, kept as the object name. (Unlike `namespace`, which the live glossary page translates in its own prose. `том` does exist as a Ukrainian rendering of `volume` in disk tooling — `parted`, `util-linux` — but there it refers to storage media and partitions, not to the Kubernetes object.) |
 | label | мітка | loc_uk dictionary, exact entry; matches `glossary/label.md`. |
@@ -76,10 +76,10 @@ more familiar.
 | web server | вебсервер | Written as one word under Ukrainian Orthography (2026), § 35, part 6(2), which joins compounds with the loan prefix `веб-`. Not a Kubernetes-specific term, so no docs precedent needed. |
 | environment | середовище | Standard, unambiguous; matches `glossary` usage of "середовище" for "environment" throughout `kubernetes.io/uk`. (Not evidence from control-plane contexts: `control plane` is `Площина управління` there, and the term does not appear in this book at all.) |
 | load balancing | балансування навантаження | Confirmed via `what-is-kubernetes.md`: "Балансування навантаження". |
-| scheduling (general concept, p7 note) | планування | Not in loc_uk's dictionary as a noun (only the verb "schedule → розподіляти (Pod'и по вузлах)", specific to what kube-scheduler does). "Планування" was used for the general noun in a list of infrastructure challenges, to avoid collision with the separately-listed "distribution" in the same sentence. **Flagged for reviewer** as a judgment call, not a directly sourced term. |
-| distribution (p7 note, distinct from scheduling) | розповсюдження | General Ukrainian vocabulary; chosen to avoid overlapping with "планування" (scheduling) in the same list. |
+| scheduling (p7 note) | «визначати, де запускати контейнери» | Rendered as the action rather than as a noun. loc_uk has no noun for it, only the verb "schedule → розподіляти (Pod'и по вузлах)"; «планування» named the term without saying what happens to a container. |
+| distribution (p7 note) | розподіл контейнерів між машинами | Rendered descriptively as distributing containers across machines, keeping the original's separate mentions of scheduling and distribution. «Розповсюдження» reads as distributing information. |
 | storage backend | система зберігання даних | No K8s-uk precedent found for this exact compound. "backend" alone is attested as "бекенд" (loc_uk dictionary), but stacking it as "бекенд сховища" reads as an awkward doubled loanword; a plain descriptive phrase was used instead, consistent with "сховища інформації" used as the Storage section title in `content/uk/docs/concepts/storage/_index.md`. |
-| production (p9 note) | продакшн-середовище | loc_uk dictionary has "production \| прод" (community slang), but that reads too casual for what should be a neutral documentation register even in a children's book; the fuller, still-common "продакшн-середовище" was used instead. **Deliberate deviation, flagged for reviewer.** |
+| production (p9 note) | робоче середовище | loc_uk dictionary has "production \| прод" (community slang), too casual for a neutral register. «Продакшн-середовище» was the earlier choice; «робоче середовище» says the same in plain Ukrainian, with a short gloss for a child on p9. |
 | replication controller (p16) | контролер реплікації | The English source text itself uses the legacy pre-ReplicaSet term "replication controller" at p16 (an artifact of the original book, not something this translation invented — `en.md` is not edited). Translated descriptively rather than as a proper noun, since "ReplicationController" is not in the untranslated-kinds list and the book already introduced "ReplicaSet" as the named concept one page earlier. "контролер" itself confirmed via loc_uk dictionary ("controller \| контролер"). |
 | project (Kubernetes project) | проєкт | Modern Ukrainian orthography (2019 reform) spelling, used consistently instead of the older "проект". |
 
@@ -153,12 +153,10 @@ more familiar.
    word for Volume (something like "скринька"/"комора" as a container-for-your-things
    metaphor) with "Volume" reserved for the Note. It was left as plain "Volume" on both pages,
    to avoid inventing an unsourced metaphor without a second opinion.
-4. **"планування" for the generic "scheduling"** in the p7 Note (list of infrastructure
-   challenges) is an editorial choice, not directly sourced from any Ukrainian K8s doc — the
-   only scheduling-related entry in loc_uk is a verb specific to kube-scheduler's job
-   ("розподіляти Pod'и по вузлах"). Worth checking against how the (not-yet-translated)
-   `kube-scheduler` concept page eventually renders it, if it ever gets translated.
-5. **"продакшн-середовище" instead of the community-slang "прод"** (loc_uk dictionary's
-   actual entry) for p9 — chosen for register reasons (documentation-neutral rather than
-   insider-casual), but this is a deviation from the sourced term, not a direct application
-   of it.
+4. **The p7 Note now names the action** ("визначати, де запускати контейнери… розподіляти їх
+   між машинами") rather than using a noun, because loc_uk has no noun for scheduling and
+   «планування» said nothing about what happens to a container. Worth checking against how
+   the (not-yet-translated) `kube-scheduler` concept page eventually renders it.
+5. **"робоче середовище" instead of the community-slang "прод"** (loc_uk dictionary's actual
+   entry) for p9 — a deviation from the sourced term, chosen for register: neutral rather
+   than insider-casual, and plain enough for a child with the gloss that follows it.
