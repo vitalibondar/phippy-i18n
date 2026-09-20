@@ -59,7 +59,7 @@ apostrophe-plural style reads more smoothly aloud and may be more familiar.
 | service discovery | виявлення сервісу | loc_uk dictionary, exact entry (singular "сервісу", not plural — differs from the older `what-is-kubernetes.md` page which uses plural "Виявлення сервісів"; the dictionary was followed as the more deliberately curated term list). |
 | ReplicaSet | ReplicaSet (undeclined save via apostrophe pattern; plural ReplicaSets) | Not in loc_uk's dictionary table by name, but covered by the general object-name rule and listed alongside Deployment/DaemonSet/StatefulSet as untranslated in `content/uk/docs/concepts/_index.md`. The English source book already capitalizes "ReplicaSets" as a proper term (p14–15), so no change of register was needed. |
 | replica | репліка | loc_uk dictionary, exact entry; declines as a normal feminine noun (репліка, репліки, реплік). |
-| Namespace (API kind) | простір імен (translated, lowercase) | **Deviates from loc_uk's literal object-name rule**, which lists Namespace among the untranslated kinds. The actual live page `kubernetes.io/uk/docs/reference/glossary/namespace.md` was followed instead: its title is "Namespace" but `aka: Простір імен`, and the entire body prose uses "Простори імен" throughout, never bare "Namespace". This reads as the Ukrainian docs team applying their *other* stated rule — "Частовживані і усталені за межами Kubernetes слова перекладаємо" (terms already established outside Kubernetes get translated) — since "namespace" predates Kubernetes as a general CS term and already had a settled Ukrainian translation. It also reads far better aloud in a children's book than leaving "Namespace" bare mid-sentence. **Flagged for reviewer**: this is a judgment call between two K8s-team sources that disagree with each other. |
+| Namespace (API kind) | простір імен (translated, lowercase) | **Deviates from loc_uk's literal object-name rule**, which lists Namespace among the untranslated kinds. The actual live page `kubernetes.io/uk/docs/reference/glossary/namespace.md` was followed instead: its title is "Namespace" but `aka: Простір імен`, and the entire body prose uses "Простори імен" throughout, never bare "Namespace". Why that page departs from the written rule is not stated there, so no reason is assumed here. It also reads far better aloud in a children's book than leaving "Namespace" bare mid-sentence. **Flagged for reviewer**: this is a judgment call between two K8s-team sources that disagree with each other. |
 | Volume (API kind) | Volume (undeclined, vowel-ending) | loc_uk core rule, kept as the object name. (Unlike `namespace`, which the live glossary page translates in its own prose. `том` does exist as a Ukrainian rendering of `volume` in disk tooling — `parted`, `util-linux` — but there it refers to storage media and partitions, not to the Kubernetes object.) |
 | label | мітка | loc_uk dictionary, exact entry; matches `glossary/label.md`. |
 | name tag (Story-page metaphor for label) | бейджик | Deliberate departure from "мітка" on Story pages only — see Adaptations below. |
@@ -92,10 +92,9 @@ apostrophe-plural style reads more smoothly aloud and may be more familiar.
 ## Deliberate adaptations (not literal translation)
 
 - **"Genetics and sheep" (p14) setting up cloning.** Kept as a direct translation
-  ("генетикою та вівцями") rather than adapted. The joke depends on the reader recognizing
-  Dolly the sheep as the famous first cloned mammal — this is an internationally known
-  reference, equally recognized in Ukraine (covered in Ukrainian school biology and popular
-  science), so no localization was needed.
+  ("генетикою та вівцями") rather than adapted. Recognizing the allusion to Dolly the sheep
+  adds a joke, but it is not needed to follow Phippy asking to be cloned, so the line works
+  either way and no localization was added.
 - **"Kubernetes is Greek for helmsman/ship's captain," and *Cybernetic*/*Gubernatorial*
   deriving from it (p9).** This etymological joke survives translation intact, because
   Ukrainian borrowed the same Greek root (κυβερνάω) into "кібернетика" and "губернатор" just
