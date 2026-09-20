@@ -42,11 +42,14 @@ vowel-ending singular is not declined (`Service`, `Volume`, `Namespace`); plural
 bare English form (`Pods`, `Services`, `Volumes` — not a Ukrainianized `-и`/`-ів` ending).
 
 The plural rule is stated explicitly in loc_uk ("У множині використовуємо англійську форму:
-користуватися Services, спільні Volumes"), even though some older glossary pages (`pod.md`,
-`label.md`, `service.md`) instead use `Podʼи`/`Serviceʼи`/`Podʼів`. The written rule was
-followed over the inconsistent legacy pages, as the explicit and current guidance for
-translators. This choice still needs a native reviewer's confirmation: the older
-apostrophe-plural style reads more smoothly aloud and may be more familiar.
+користуватися Services, спільні Volumes"), while the glossary pages `pod.md`, `label.md` and
+`service.md` use `Podʼи`/`Serviceʼи`/`Podʼів` instead. The file modification dates do not
+establish which wording is newer (those pages 2026-02, `localization_uk.md` 2024-01; file
+dates, not per-line blame). The two parts of the Ukrainian team's own material disagree,
+and `namespace.md` does both at once — `Простори імен` in its prose, and `Pods, Deployments,
+Services` in bare English plural. The written rule is followed here. The choice still needs a
+native reviewer's confirmation: the apostrophe plural reads more smoothly aloud and may be
+more familiar.
 
 ## Term table
 
